@@ -5,9 +5,9 @@ void main(void)
     PM5CTL0 &= ~LOCKLPM5;
     P1DIR |= BIT0;               // P1.0  output
     //PWM Generator
-    TB0CCR0 = 82-1;
+    TB0CCR0 = 8192-1;
     TB0CCTL1 = OUTMOD_7;
-    TB0CCR1 = 17;
+    TB0CCR1 = 1639;
     TB0CTL = TBSSEL_1 + MC_1 + TBCLR;
     TB0CCTL0 |= CCIE;
     TB0CCTL1 |= CCIE;
