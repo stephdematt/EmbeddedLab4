@@ -5,7 +5,7 @@ int main(void)
     P6OUT &= ~BIT6;                            //P6.6 set up
     P6DIR |= BIT6;                             //P6.6 output 
     PM5CTL0 &= ~LOCKLPM5;
-    SFRIE1 |= WDTIE;                          //
+    SFRIE1 |= WDTIE;                          //enable the watchdog interrupt 
     _enable_interrupts();                     //enables interruputs
     while (1);
     }
